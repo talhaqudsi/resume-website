@@ -6,63 +6,79 @@ body {
     padding: 0;
     background: #f4f4f4;
     color: #333;
-  }
-  
-  /* Header & Navigation */
-  header {
+}
+
+/* Header & Navigation */
+header {
     background: #35424a;
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
-  }
-  
-  header h1 {
+}
+
+header h1 {
     margin: 0;
-  }
-  
-  nav ul {
+}
+
+nav ul {
     list-style: none;
     padding: 0;
     margin: 10px 0 0;
-  }
-  
-  nav ul li {
+}
+
+nav ul li {
     display: inline;
     margin: 0 10px;
-  }
-  
-  nav ul li a {
+}
+
+nav ul li a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-  }
-  
-  nav ul li a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Main Content */
-  main {
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+nav ul li a.active {
+    background-color: #000000;
+    /* Different background color */
+    color: #fff;
+    /* Ensure the text is visible */
+    padding: 5px 10px;
+    /* Add some padding for a button-like appearance */
+    border-radius: 5px;
+    /* Slightly round the corners */
+}
+
+nav ul li a:hover {
+    background-color: #000000;
+    /* A slightly different color for hover */
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Main Content */
+main {
     padding: 20px;
     background: #ffffff;
     margin: 20px auto;
     max-width: 800px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  section h2 {
+}
+
+section h2 {
     border-bottom: 2px solid #35424a;
     padding-bottom: 5px;
-  }
-  
-  /* Lists */
-  ul {
+}
+
+/* Lists */
+ul {
     margin: 0;
     padding-left: 20px;
-  }
-  
-  /* Footer */
-  footer {
+}
+
+/* Footer */
+footer {
     text-align: center;
     padding: 10px;
     background: #35424a;
@@ -70,13 +86,35 @@ body {
     position: fixed;
     width: 100%;
     bottom: 0;
-  }
-  
-  /* Responsive Navigation */
-  @media (max-width: 600px) {
+}
+
+.spacer {
+    height: 80px;
+}
+
+/* Headshot Section Styling */
+.headshot {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.headshot h2 {
+    margin-bottom: 10px;
+}
+
+.headshot img {
+    max-width: 150px;
+    width: 100%;
+    height: auto;
+    border-radius: 5%;
+    border: 2px solid #35424a;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Navigation */
+@media (max-width: 600px) {
     nav ul li {
-      display: block;
-      margin: 5px 0;
+        display: block;
+        margin: 5px 0;
     }
-  }
-  
+}
